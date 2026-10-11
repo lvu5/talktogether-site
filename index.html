@@ -23,11 +23,19 @@
   </header>
   <main>
     <section class="hero welcome">
-      <img class="hero-logo" src="assets/BrandLogo.png" alt="Hello friend — TalkTogether logo" width="132" height="132">
-      <h1>Good conversations<br>start here.</h1>
-      <p class="lede">Meet someone new, share a moment, and make the world feel a little closer — on iPhone and iPad.</p>
-      <div class="chips"><span>🔀 Random</span><span>📍 Nearby</span><span>🌐 Your language</span></div>
-      <div class="cta">
+      <div class="hero-stage">
+        <img class="buddy b1" src="assets/AvatarTeddy.png" alt="" aria-hidden="true">
+        <img class="buddy b2" src="assets/AvatarCat.png" alt="" aria-hidden="true">
+        <img class="buddy b3" src="assets/AvatarPenguin.png" alt="" aria-hidden="true">
+        <img class="buddy b4" src="assets/AvatarParakeet.png" alt="" aria-hidden="true">
+        <img class="buddy b5" src="assets/AvatarFerret.png" alt="" aria-hidden="true">
+        <img class="hero-logo" src="assets/BrandLogo.png" alt="Hello friend — TalkTogether logo" width="132" height="132">
+      </div>
+      <p class="hello" aria-label="Hello"><span class="hello-word">Hello</span></p>
+      <h1 class="reveal"><span>Good</span> <span>conversations</span><br><span>start</span> <span>here.</span></h1>
+      <p class="lede reveal-late">Meet someone new, share a moment, and make the world feel a little closer — on iPhone and iPad.</p>
+      <div class="chips reveal-late"><span>🔀 Random</span><span>📍 Nearby</span><span>🌐 Your language</span></div>
+      <div class="cta reveal-late">
         <a class="button button-dark" href="#"> Download on the App Store</a>
         <a class="button button-soft" href="about/">Learn more</a>
       </div>
@@ -44,6 +52,29 @@
       <a class="button" href="guidelines/">Read the guidelines</a>
     </section>
   </main>
-  <footer>© 2026 TalkTogether · <a href="mailto:vutronglinh235@gmail.com">vutronglinh235@gmail.com</a></footer>
+  <footer>© 2026 TalkTogether</footer>
+  <script>
+    (() => {
+      const word = document.querySelector('.hello-word');
+      if (!word || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const hellos = [
+        ['Hello','en'],['Xin chào','vi'],['Hola','es'],['Bonjour','fr'],['こんにちは','ja'],
+        ['안녕하세요','ko'],['你好','zh'],['Ciao','it'],['Olá','pt'],['Hallo','de'],
+        ['नमस्ते','hi'],['Merhaba','tr'],['Привет','ru'],['Hej','sv'],['مرحبا','ar']
+      ];
+      let i = 0;
+      setInterval(() => {
+        word.classList.add('out');
+        setTimeout(() => {
+          i = (i + 1) % hellos.length;
+          word.textContent = hellos[i][0];
+          word.lang = hellos[i][1];
+          word.classList.remove('out');
+          word.classList.add('in');
+          requestAnimationFrame(() => requestAnimationFrame(() => word.classList.remove('in')));
+        }, 450);
+      }, 2200);
+    })();
+  </script>
 </body>
 </html>
