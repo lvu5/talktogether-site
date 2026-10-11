@@ -1,7 +1,7 @@
 /* Mirrors TalkTogether/App/AppTheme.swift:
-   "Hello Friend" light palette + Tokyo Night-inspired dark palette. */
+   "Hello Friend" light palette (the site always uses light mode). */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: #fffae8;            /* cream */
   --surface: #fffdf2;       /* surface */
   --surface-muted: #fff0bf; /* surfaceMuted */
@@ -21,27 +21,6 @@
   --on-accent: #17385e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f0f17;            /* navy */
-    --surface: #24293b;
-    --surface-muted: #292e45;
-    --peach: #292e45;
-    --ink: #bfc9f5;
-    --muted: #99a6cf;
-    --accent: #7dcfff;
-    --accent-2: #ba99f7;
-    --accent-strong: #7aa3f7;
-    --coral: #3d59a1;
-    --mint: #294d54;
-    --rose: #f7768f;
-    --green: #73d9c9;
-    --electric: #404769;
-    --navy: #0f0f17;
-    --line: rgba(153, 166, 207, .18);
-    --on-accent: #0f0f17;
-  }
-}
 
 * { box-sizing: border-box; }
 
