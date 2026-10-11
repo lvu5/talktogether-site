@@ -71,8 +71,9 @@
           word.lang = hellos[i][1];
           word.classList.remove('out');
           word.classList.add('in');
-          requestAnimationFrame(() => requestAnimationFrame(() => word.classList.remove('in')));
-        }, 450);
+          void word.offsetWidth; // commit the off-screen start position
+          word.classList.remove('in');
+        }, 420);
       }, 2200);
     })();
   </script>
