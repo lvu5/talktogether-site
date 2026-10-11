@@ -7,11 +7,13 @@
   <meta name="theme-color" content="#fffae8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f17" media="(prefers-color-scheme: dark)">
   <title>TalkTogether</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/BrandLogo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <a class="brand" aria-current="page" href="./">TalkTogether</a>
+    <a class="brand" aria-current="page" href="./"><img src="assets/BrandLogo.png" alt="" width="36" height="36">TalkTogether</a>
     <nav aria-label="Site navigation">
       <a aria-current="page" href="./">Home</a>
       <a href="about/">About</a>
@@ -21,11 +23,16 @@
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <span class="eyebrow">TalkTogether for iPhone and iPad</span>
-      <h1>Real conversations, made simple.</h1>
-      <p class="lede">Match with people nearby or by language, join community rooms, and stay connected with private messages, voice, and video.</p>
-      <div class="chips"><span>Guest access</span><span>Google</span><span>Apple</span><span>Adults 18+</span></div>
+    <section class="hero welcome">
+      <img class="hero-logo" src="assets/BrandLogo.png" alt="Hello friend — TalkTogether logo" width="132" height="132">
+      <h1>Good conversations<br>start here.</h1>
+      <p class="lede">Meet someone new, share a moment, and make the world feel a little closer — on iPhone and iPad.</p>
+      <div class="chips"><span>🔀 Random</span><span>📍 Nearby</span><span>🌐 Your language</span></div>
+      <div class="cta">
+        <a class="button button-dark" href="#"> Download on the App Store</a>
+        <a class="button button-soft" href="about/">Learn more</a>
+      </div>
+      <p class="fineprint">Guest, Google, or Apple sign-in · Adults 18+</p>
     </section>
     <section class="card-grid" aria-label="Product highlights">
       <article><h2>Choose your people</h2><p>Find conversations by language and approximate distance without publishing your exact location.</p></article>
